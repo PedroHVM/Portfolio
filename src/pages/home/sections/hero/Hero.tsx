@@ -17,7 +17,7 @@ const Hero = () => {
       paddingTop: "100px",
     },
     [theme.breakpoints.up('md')]: {
-      paddingTop: "100px",
+      paddingTop: "0",
     }
   }))
 
@@ -48,7 +48,7 @@ const Hero = () => {
               <Typography color='primary.contrastText' variant='h2' textAlign="center">I'm a Web Developer</Typography>
               <Grid2 container display="center" justifyContent="center" spacing={3} pt={3}>
                 <Grid2 size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
-                  <StyledButton>
+                  <StyledButton onClick={()=> console.log("download")}>
                     <DownloadIcon />
                     <Typography>
                       Download CV
@@ -56,7 +56,7 @@ const Hero = () => {
                   </StyledButton>
                 </Grid2>
                 <Grid2 size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
-                  <StyledButton>
+                  <StyledButton onClick={()=> console.log("contact")}>
                     <EmailOutlinedIcon />
                     <Typography>
                       Contact me
